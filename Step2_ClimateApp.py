@@ -1,5 +1,4 @@
 import numpy as np
-
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
@@ -38,11 +37,12 @@ app = Flask(__name__)
 def welcome():
     """List all available api routes."""
     return (
-        f"Welcome to the 'Surf's Up' Climate App!"
+        f"Welcome to the 'Surf's Up' Climate App! <br/>"
         f"Available Routes:<br/>"
         f"For Precipiations Data from the Last 12 Months: /api/v1.0/precipitation <br/>"
         f"For A Complete List of Stations: /api/v1.0/stations <br/>"
-        f"For Temperature Observations from the Busiest Station from the Last 12 Months: /api/v1.0/tobs"
+        f"For Temperature Observations from the Busiest Station* from the Last 12 Months: /api/v1.0/tobs <br/>"
+        f"*The Busiest Station (the one with the most activity/recorded observations) was USC00519281"
     )
 
 
